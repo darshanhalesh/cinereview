@@ -96,60 +96,8 @@ Run migrations if needed:
 npx supabase db push
 ```
 
-## 🚨 Troubleshooting
 
-### Common Authentication Issues
 
-1. **"Missing Supabase environment variables" error**
-   - Ensure your `.env` file exists and contains the correct values
-   - Restart the development server after updating environment variables
-   - Check that the file is not in `.gitignore` (it should be)
-
-2. **"Invalid login credentials" error**
-   - Verify your Supabase project is active
-   - Check that the project ID and API key are correct
-   - Ensure email confirmations are properly configured
-
-3. **"User already registered" error**
-   - This is normal behavior - the user should sign in instead
-   - Check if email confirmation is required and completed
-
-4. **CORS or network errors**
-   - Verify your Supabase project URL is accessible
-   - Check browser console for specific error messages
-   - Ensure your Supabase project allows requests from your domain
-
-5. **JWT token expiration issues**
-   - Check Supabase Auth settings for token expiration times
-   - Ensure auto-refresh is enabled in the client configuration
-   - Verify localStorage is accessible in your browser
-
-### Development Server Issues
-
-1. **"vite is not recognized" error**
-   ```bash
-   npm install -g vite
-   # or use npx
-   npx vite
-   ```
-
-2. **Port 8080 already in use**
-   ```bash
-   # Kill the process using the port
-   netstat -ano | findstr :8080
-   taskkill /PID <PID> /F
-   ```
-
-3. **TypeScript compilation errors**
-   ```bash
-   npm run build
-   # Check for specific type errors
-   ```
-
-4. **Missing image files error**
-   - The application now uses CSS gradients instead of image files
-   - If you want to use custom images, place them in the `public/` directory
-   - Update component imports to reference public images
 
 ## 📁 Project Structure
 
